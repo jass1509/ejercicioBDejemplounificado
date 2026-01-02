@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas de Universidades</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+        th { background-color: #2c3e50; color: white; padding: 15px; text-align: left; }
+        td { padding: 12px; border-bottom: 1px solid #ddd; }
+        tr:hover { background-color: #f1f1f1; }
+        h1 { color: #2c3e50; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <h1>Listado de Programas Universitarios</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Columna 2</th>
+                <th>Columna 7</th>
+                <th>Columna 13</th>
+                <th>Columna 19</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in programas %}
+            <tr>
+                <td>{{ p['COL 2'] }}</td>
+                <td>{{ p['COL 7'] }}</td>
+                <td>{{ p['COL 13'] }}</td>
+                <td>{{ p['COL 19'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
