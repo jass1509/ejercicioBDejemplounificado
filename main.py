@@ -9,7 +9,7 @@ def conectar_bd():
         host='localhost',
         user='root',
         password='',
-        database='csv_db 11', # Nombre de tu base de datos
+        database='csv_db 11', 
         port=3306 
     )
 
@@ -19,7 +19,6 @@ def index():
         conexion = conectar_bd()
         cursor = conexion.cursor(dictionary=True)
         
-        # Usamos comillas invertidas (`) porque los nombres tienen espacios
         query = """
             SELECT `COL 2`, `COL 7`, `COL 13`, `COL 19` 
             FROM `programas_de_universidades_8`
